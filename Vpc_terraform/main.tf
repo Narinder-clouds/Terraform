@@ -24,11 +24,6 @@ resource "aws_route_table" "route-table" {
         gateway_id = aws_internet_gateway.gateway.id
     } 
 }
-# resource "aws_internet_gateway_attachment" "gate-atachment" {
-#     vpc_id = aws_vpc.MyVpc.id
-#     depends_on = [ aws_internet_gateway.gateway ]
-#     internet_gateway_id = aws_internet_gateway.gateway.id}
-
 
 resource "aws_route_table" "private-route" {
     vpc_id = aws_vpc.MyVpc.id
